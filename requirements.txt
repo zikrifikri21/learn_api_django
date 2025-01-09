@@ -1,0 +1,4 @@
+psycopg2 #comment this for mysql
+# mysqlclient #uncomment this for mysql
+djangorestframework
+python-decouple
