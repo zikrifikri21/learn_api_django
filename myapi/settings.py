@@ -25,19 +25,23 @@ SECRET_KEY = config('SECRET_KEY',default='django-insecure-f-8fe7gv-8bhj9^9(@t@44
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    DEBUG and 'localhost',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pengguna',
+    'django_extensions',
+    'books',
+    'facerecognition',
 ]
 
 MIDDLEWARE = [
